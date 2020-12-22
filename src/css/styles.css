@@ -31,25 +31,7 @@ body {
   margin-bottom: 20px;
 
   font-size: 30px;
-  font-weight: bold;
-}
-
-#search-input {
-  width: 400px;
-  min-height: 50px;
-  padding: 10px 20px 10px 45px;
-  border: 1px solid rgb(255, 255, 255);
-  border-radius: 50px;
-  box-shadow: 2px 1px 16px 0px rgba(0, 0, 0, 0.39);
-  font-size: 16px;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  outline: none;
-}
-
-.search-wrap:hover #search-input,
-.search-wrap:focus #search-input {
-  box-shadow: 2px 1px 16px 0px rgba(66, 133, 244, 0.39);
-  outline: none;
+  font-weight: 700;
 }
 
 .blue {
@@ -68,6 +50,28 @@ body {
   color: rgb(15, 157, 88);
 }
 
+#search-input {
+  width: 400px;
+  height: 50px;
+  padding: 10px 20px 10px 45px;
+
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 50px;
+  box-shadow: 2px 1px 16px 0px rgba(0, 0, 0, 0.39);
+
+  font-size: 16px;
+
+  outline: none;
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.search-wrap:hover #search-input,
+.search-wrap:focus #search-input {
+  box-shadow: 2px 1px 16px 0px rgba(66, 133, 244, 0.39);
+  outline: none;
+}
+
 .icon-wrap {
   position: relative;
 }
@@ -77,8 +81,10 @@ body {
   top: 50%;
   left: 20px;
   transform: translateY(-50%);
+
   width: 20px;
   height: 20px;
+
   fill: rgba(0, 0, 0, 0.39);
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -112,6 +118,7 @@ body {
   text-align: center;
   font-size: 30px;
 }
+
 .country-info-wrap {
   display: flex;
   justify-content: space-around;
@@ -119,7 +126,7 @@ body {
 }
 
 .country-info-caption {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .flag {

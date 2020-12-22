@@ -5,6 +5,6 @@ import '../../node_modules/pnotify/dist/PNotifyBrightTheme.css';
 export default function showError(errorMessage) {
   PNotify.error({
     text: errorMessage,
-    delay: 5000,
+    delay: 4000,
   });
 }
