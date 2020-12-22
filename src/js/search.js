@@ -14,17 +14,21 @@ function onSearch() {
     return;
   }
 
-  fetchCountries(searchQuery).then(data => {
-    refs.containerRef.innerHTML = '';
+  fetchCountries(searchQuery)
+    .then(data => {
+      refs.containerRef.innerHTML = '';
 
-    if (data.length > 10) {
-      return showError();
-    } else if (data.length > 1 && data.length <= 10) {
-      renderCountriesList(data);
-    } else {
-      renderOneCountry(data);
-    }
-  });
+      if (data.length > 10) {
+        return showError(
+          'Too many mathces found. Please enter a more specific query.',
+        );
+      } else if (data.length > 1 && data.length <= 10) {
+        renderCountriesList(data);
+      } else {
+        renderOneCountry(data);
+      }
+    })
+    .catch(error => showError('No matches were found! Try again.'));
 }
 
 function getSearchQuery() {

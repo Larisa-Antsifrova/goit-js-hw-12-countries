@@ -8,8 +8,24 @@
   </head>
 
   <body>
-    <input data-query="search" type="text" />
-    <ul class="countries-list-container"></ul>
-    <div class="one-country-container"></div>
+    <div class="container">
+      <div class="search-wrap">
+        <label class="search-label" for="search-input">
+          <span class="blue">What</span> <span class="red">country</span>
+          <span class="yellow">would</span> <span class="blue">you</span>
+          <span class="green">like</span>
+          <span class="red">to find?</span>
+        </label>
+        <div class="icon-wrap">
+          <input data-query="search" type="text" id="search-input" />
+          <svg class="search-icon">
+            <use href="./images/sprite.svg#icon-search"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="result-wrap">
+        <ul class="countries-list"></ul>
+      </div>
+    </div>
   </body>
 </html>

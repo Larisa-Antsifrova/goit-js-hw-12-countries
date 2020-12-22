@@ -1,10 +1,10 @@
-import { error } from '@pnotify/core';
-import '@pnotify/core/dist/BrightTheme.css';
+import PNotify from '../../node_modules/pnotify/dist/es/PNotify.js';
+import PNotifyButtons from '../../node_modules/pnotify/dist/es/PNotifyButtons.js';
+import '../../node_modules/pnotify/dist/PNotifyBrightTheme.css';
 
-export default function showError() {
-  error({
-    title: false,
-    text: 'Too many mathces found. Please enter a more specific query.',
-    sticker: false,
+export default function showError(errorMessage) {
+  PNotify.error({
+    text: errorMessage,
+    delay: 5000,
   });
 }
