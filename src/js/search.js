@@ -3,6 +3,7 @@ import refs from './refs.js';
 import debounce from 'lodash.debounce';
 import countriesListTpl from '../templates/countries-list.hbs';
 import oneCountryTpl from '../templates/one-country.hbs';
+import showError from './error-notification.js';
 
 refs.inputRef.addEventListener('input', debounce(onSearch, 500));
 
@@ -17,7 +18,7 @@ function onSearch() {
     refs.containerRef.innerHTML = '';
 
     if (data.length > 10) {
-      return alert('Please, make more specific query');
+      return showError();
     } else if (data.length > 1 && data.length <= 10) {
       renderCountriesList(data);
     } else {
